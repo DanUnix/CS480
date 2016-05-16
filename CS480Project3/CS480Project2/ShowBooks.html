@@ -1,0 +1,126 @@
+<%@ include file="CommonStuff.jsp" %>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%!%>
+	<table>
+		<thead>
+			<tr>
+				<td style="width: 200px;">Book Title</td>
+				<td style="width: 200px;">Authors</td>
+				<td style="width: 200px;">Description</td>
+				<td style="width: 200px;">Price</td>
+				<td style="width: 200px;">Quantity</td>
+			</tr>
+			</thead>
+<!--Here we start building the table.
+1. Send query to database-->
+while(resultSet.next()) {
+out.println("
+
+<form action=\"InsertOrder.jsp\" method=\"post\">
+			<tr>
+				<td><img src=\""+resultSet.getString("path_of_image")+
+				"\" style=\"height: 318px; width: 197px; \"></td>
+				<td>"+resultSet.get("author_name") +
+				"" ...
+				+ "...</form>");
+
+}
+			<form action="InsertOrder.jsp" method="post">
+			<tr>
+				<td><img src="img/hhgtg.jpg" style="height: 318px; width: 197px; "></td>
+				<td>Douglas Adams</td>
+				<td>A book about the meaning of Life, the Universe, and Everything</td>
+				<td>$4.99</td>
+				<td>
+				    <input type="text" name="quantity" value="">
+				</td>
+				    <input type="hidden" name="ISBN" value="9780345391803">
+				<td>
+				    <input type="submit" value="Order">
+				</td>
+			</tr>
+			</form>
+			<form action="InsertOrder.jsp" method="post">
+			<tr>
+				<td><img src="img/2312.jpg" style="height: 318px; width: 197px; "></td>
+				<td>Kim Stanley Robinson</td>
+				<td>It is the year 2312</td>
+				<td>$4.99</td>
+				<td>
+				    <input type="text" name="quantity" value="">
+				</td>
+				    <input type="hidden" name="ISBN" value="9780316098113">
+				<td>
+				    <input type="submit" value="Order">
+				</td>
+			</tr>
+			</form>
+			<form action="InsertOrder.jsp" method="post">
+			<tr>
+				<td><img src="img/the_man_in_the_high_castle_frontcover.jpg" style="height: 318px; width: 197px; "></td>
+				<td>Philip Dick</td>
+				<td>What if the nazis won the war in a different reality?</td>
+				<td>$5.99</td>
+				<td>
+				    <input type="text" name="quantity" value="">
+				</td>
+				    <input type="hidden" name="ISBN" value="9780547572482">
+				<td>
+				    <input type="submit" value="Order">
+				</td>
+			</tr>
+			</form>
+			<form action="InsertOrder.jsp" method="post">
+			<tr>
+				<td><img src="img/quarantine.jpg" style="height: 318px; width: 197px; "></td>
+				<td>Greg Egan</td>
+				<td>The mind is the ultimate quantum wave collapser</td>
+				<td>$3.99</td>
+				<td>
+				    <input type="text" name="quantity" value="">
+				</td>
+				    <input type="hidden" name="ISBN" value="9781597805384">
+				<td>
+				    <input type="submit" value="Order">
+				</td>
+			</tr>
+			</form>
+			<form action="InsertOrder.jsp" method="post">
+			<tr>
+				<td><img src="img/cryptonomicon.jpg" style="height: 318px; width: 197px; "></td>
+				<td>Neal Stephenson</td>
+				<td>How to get rich with cryptography and other stories</td>
+				<td>$3.99</td>
+				<td>
+				    <input type="text" name="quantity" value="">
+				</td>
+				    <input type="hidden" name="ISBN" value="9781597805384">
+				<td>
+				    <input type="submit" value="Order">
+				</td>
+			</tr>
+			</form>
+			<form action="InsertOrder.jsp" method="post">
+			<tr>
+				<td><img src="img/liff.jpg" style="height: 318px; width: 197px; "></td>
+				<td>Douglas Adams & John Lloyd</td>
+				<td>A useful dictionary</td>
+				<td>$3.99</td>
+				<td>
+				    <input type="text" name="quantity" value="">
+				</td>
+				    <input type="hidden" name="ISBN" value="0517553473123">
+				<td>
+				    <input type="submit" value="Order">
+				</td>
+			</tr>
+			</form>
+	</table>
+</body>
+</html>
